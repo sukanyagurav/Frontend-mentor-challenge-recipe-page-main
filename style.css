@@ -1,0 +1,142 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --title-color: hsl(14, 45%, 36%);
+    --title-color-2: hsl(332, 51%, 32%);
+    --white: hsl(0, 0%, 100%);
+    --bg: hsl(330, 100%, 98%);
+    --bg-2: hsl(30, 54%, 90%);
+    --light-gray: hsl(30, 18%, 87%);
+    --brown: hsl(30, 10%, 34%);
+    --dark: hsl(24, 5%, 18%);
+}
+@font-face{
+    font-family: OutfitVariableFont;
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+@font-face{
+    font-family: YoungSerif;
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+body{
+    margin-inline: auto;
+    background-color: var(--bg-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family:OutfitVariableFont ;
+    font-weight: 400;
+    padding: 0.5rem;
+}
+h1,h2{
+    font-family: YoungSerif;
+}
+main{
+    max-width: 750px;
+    width: 100%;
+    background-color: var(--white);
+    margin-top:3rem;
+    padding:2.2rem;
+    border-radius: 25px;
+    color: var(--dark);
+    line-height: 1.6;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+}
+h2{
+    color: var(--title-color);
+    margin: 1rem 0;
+    font-weight: 400;
+}
+.recipe__time h3{
+    color: var(--title-color-2);
+}
+img{
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+.recipe__image{
+    overflow: hidden;
+    border-radius: 10px;
+}
+.recipe__image:hover img{
+    transform: scale(1.2);
+}
+.recipe__details{
+    margin-top: 2rem;
+}
+.recipe__description h1{
+    font-size: clamp(1.5rem,1vw + 1.4rem,2.4rem);
+    color: var(--brown);
+    font-weight: 400;
+}
+.recipe__description p{
+    margin: 0.5rem 0 2rem;
+}
+.recipe__time{
+    padding:1.3rem 2rem 1.3rem;
+    background-color: var(--bg);
+    border-radius: 10px;
+    line-height: 2;
+}
+.recipe__time ul{
+    margin-left:2rem;
+}
+.title{
+    color: var(--dark);
+    font-weight: 700;
+}
+.recipe__time ul li::marker,
+.recipe__ingredients ul li::marker
+.recipe__instructions ol li::marker{
+    color: var(--title-color-2);
+    margin-right: 1rem;
+}
+.recipe__ingredients,.recipe__instructions{
+    border-bottom: 0.1rem solid var(--light-gray);
+    padding-bottom: 1.4rem;
+}
+.recipe__ingredients ul , .recipe__instructions ol{
+    margin-left:2rem;
+}
+.recipe__instructions ol li::marker{
+    color: var(--title-color-2);
+    font-weight: 700;
+}
+.recipe__ingredients ul li{
+    line-height: 2;
+}
+.recipe__instructions ol li{
+  margin-top: 0.8rem;
+}
+.recipe__nutrition ul{
+    margin-top: 1rem;
+    list-style: none;
+}
+.recipe__nutrition ul li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding:0.6rem 1rem;
+}
+.recipe__nutrition ul li:not(:last-child){
+    border-bottom: 0.1rem solid var(--light-gray);
+}
+.recipe__nutrition .title{
+    color: var(--title-color-2);
+}
+footer{
+    margin: 2rem 0;
+}
+footer a{
+    color: currentColor;
+    text-decoration: none;
+}
