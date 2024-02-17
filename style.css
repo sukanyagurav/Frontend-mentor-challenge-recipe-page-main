@@ -42,12 +42,11 @@ main{
     width: 100%;
     background-color: var(--white);
     margin-top:3rem;
-    padding:2.2rem;
+    padding:1.5rem;
     border-radius: 25px;
     color: var(--dark);
     line-height: 1.6;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-   
 }
 h2{
     color: var(--title-color);
@@ -74,6 +73,7 @@ img{
 .recipe__details{
     margin-top: 2rem;
 }
+
 .recipe__description h1{
     font-size: clamp(1.5rem,1vw + 1.4rem,2.4rem);
     color: var(--brown);
@@ -81,6 +81,7 @@ img{
 }
 .recipe__description p{
     margin: 0.5rem 0 2rem;
+    /* opacity: 0; */
 }
 .recipe__time{
     padding:1.3rem 2rem 1.3rem;
@@ -91,16 +92,18 @@ img{
 .recipe__time ul{
     margin-left:2rem;
 }
+
 .title{
-    color: var(--dark);
+
     font-weight: 700;
 }
 .recipe__time ul li::marker,
 .recipe__ingredients ul li::marker
 .recipe__instructions ol li::marker{
     color: var(--title-color-2);
-    margin-right: 1rem;
+   
 }
+
 .recipe__ingredients,.recipe__instructions{
     border-bottom: 0.1rem solid var(--light-gray);
     padding-bottom: 1.4rem;
@@ -111,6 +114,11 @@ img{
 .recipe__instructions ol li::marker{
     color: var(--title-color-2);
     font-weight: 700;
+}
+.recipe__ingredients ul li,
+.recipe__instructions ol li{
+    padding-left: 1rem;
+    
 }
 .recipe__ingredients ul li{
     line-height: 2;
@@ -139,4 +147,30 @@ footer{
 footer a{
     color: currentColor;
     text-decoration: none;
+}
+@media(min-width:700px){
+    main{
+        padding: 2rem;
+    }
+}
+
+
+.textAnimation {
+    animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    -webkit-animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both; 
+}
+@keyframes text-clip {
+    from {
+      clip-path: polygon(0% 0%, 0 100%, 0 100%, 0% 0%); }
+    to {
+      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0%); } 
+}
+[data-aos="textAnimation"] {
+    clip-path: polygon(0% 0%, 0 100%, 0 100%, 0% 0%);
+
+    &.aos-animate {
+      
+        clip-path: polygon(-50% 0, 0 100%, 100% 100%, 100% 0%);
+    }
+
 }

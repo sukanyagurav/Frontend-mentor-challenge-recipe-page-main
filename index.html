@@ -7,70 +7,72 @@
   
   <title>Frontend Mentor | Recipe page</title>
   <link rel="stylesheet" href="style.css">
- 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 <body>
 <main>
   <article class="recipe_container">
     <div class="recipe__image">
 
-      <img src="./assets/images/image-omelette.jpeg"alt="recipe image">
+      <img src="./assets/images/image-omelette.jpeg"alt="Simple Omelette Recipe image"  >
     </div>
     <div class="recipe__details">
       <div class="recipe__description">
 
-        <h1>Simple Omelette Recipe</h1>
-        <p>  An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+        <h1 class="textAnimation" >Simple Omelette Recipe</h1>
+        <p class="textAnimation">  An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
           to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
       </div>
       <div class="recipe__time">
-        <h3>Preparation time</h3>
+        <h3 data-aos="textAnimation">Preparation time</h3>
         <ul>
-          <li><span class="title">Total:</span> Approximately 10 minutes</li>
-          <li><span class="title"> Preparation:</span> 5 minutes</li>
-          <li><span class="title">Cooking:</span> 5 minutes</li>
+          <li data-aos="textAnimation"><span class="title">Total:</span> Approximately 10 minutes</li>
+          <li data-aos="textAnimation"  data-aos-delay="100"><span class="title"> Preparation:</span> 5 minutes</li>
+          <li data-aos="textAnimation"  data-aos-delay="200"><span class="title">Cooking:</span> 5 minutes</li>
         </ul>
       </div>
       <section class="recipe__ingredients">
-        <h2>Ingredients</h2>
+        <h2 data-aos="textAnimation">Ingredients</h2>
         <ul>
-          <li>2-3 large eggs</li>
-          <li>Salt, to taste</li>
-          <li> Pepper, to taste</li>
-          <li> Pepper, to taste</li>
-          <li>1 tablespoon of butter or oil</li>
-          <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+          <li data-aos="textAnimation" > 2-3 large eggs</li>
+          <li data-aos="textAnimation" data-aos-delay="50"> Salt, to taste</li>
+          <li data-aos="textAnimation" data-aos-delay="100"> Pepper, to taste</li>
+    
+          <li data-aos="textAnimation" data-aos-delay="200"> 1 tablespoon of butter or oil</li>
+          <li data-aos="textAnimation" data-aos-delay="250"> Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
         </ul>
       </section>
       <section class="recipe__instructions">
-        <h2>Instructions</h2>
+        <h2 data-aos="textAnimation">Instructions</h2>
         <ol>
-          <li><span class="title"> Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+          <li data-aos="textAnimation" data-aos-delay="100"><span class="title"> Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
             You can add a tablespoon of water or milk for a fluffier texture.
           </li>
-          <li><span class="title">Heat the pan:</span> Place a non-stick frying pan over medium heat and add butter or oil.
+          <li data-aos="textAnimation" data-aos-delay="150"><span class="title">Heat the pan:</span> Place a non-stick frying pan over medium heat and add butter or oil.
           </li>
-          <li><span class="title">Cook the omelette:</span> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+          <li data-aos="textAnimation"  data-aos-delay="200"><span class="title">Cook the omelette:</span> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
             the eggs evenly coat the surface.
-          </li>
-          <li><span class="title">Add fillings (optional):</span> When the eggs begin to set at the edges but are still slightly runny in the 
+          </li >
+          <li data-aos="textAnimation"  data-aos-delay="250"><span class="title">Add fillings (optional):</span> When the eggs begin to set at the edges but are still slightly runny in the 
             middle, sprinkle your chosen fillings over one half of the omelette.
           </li>
-          <li><span class="title">Fold and serve:</span> As the omelette continues to cook, carefully lift one edge and fold it over the 
+          <li data-aos="textAnimation"  data-aos-delay="300"><span class="title">Fold and serve:</span> As the omelette continues to cook, carefully lift one edge and fold it over the 
             fillings. Let it cook for another minute, then slide it onto a plate.
           </li>
-          <li><span class="title">Enjoy:</span> Serve hot, with additional salt and pepper if needed.
+          <li data-aos="textAnimation"  data-aos-delay="350"><span class="title">Enjoy:</span> Serve hot, with additional salt and pepper if needed.
           </li>
         </ol>
       </section>
       <section class="recipe__nutrition">
-        <h2>Nutrition</h2>
-        <p>The table below shows nutritional values per serving without the additional fillings.</p>
+        <h2 data-aos="textAnimation">Nutrition</h2>
+        <p data-aos="textAnimation">The table below shows nutritional values per serving without the additional fillings.</p>
         <ul>
-          <li>Calories<span class="title">277kcal</span></li>
-          <li>Carbs<span class="title">0g</span></li>
-          <li>  Protein<span class="title">20g</span></li>
-          <li>Fat<span class="title">22g</span></li>
+          <li><span data-aos="fade-up" >Calories</span><span class="title" data-aos="fade-up" >277kcal</span></li>
+          <li > <span data-aos="fade-up" >Carbs</span><span class="title" data-aos="fade-up" >0g</span></li>
+          <li > <span data-aos="fade-up" >Protein</span> <span class="title" data-aos="fade-up" >20g</span></li>
+          <li> <span data-aos="fade-up" >Fat</span><span class="title" data-aos="fade-up" > 22g</span></li>
         </ul>
       </section>
 
@@ -82,5 +84,26 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">SG</a>.
   </footer>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script> 
+  <script>
+    AOS.init({
+      offset: 100, 
+      delay: 100, 
+      duration: 500 
+    });
+    const lenis = new Lenis()
+    
+        lenis.on('scroll', (e) => {
+    
+        })
+
+        function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+  </script>
+ 
 </body>
 </html>
