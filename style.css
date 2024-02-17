@@ -32,7 +32,6 @@ body{
     min-height: 100vh;
     font-family:OutfitVariableFont ;
     font-weight: 400;
-    padding: 0.5rem;
 }
 h1,h2{
     font-family: YoungSerif;
@@ -41,8 +40,8 @@ main{
     max-width: 750px;
     width: 100%;
     background-color: var(--white);
-    margin-top:3rem;
-    padding:1.5rem;
+    /* margin-top:3rem; */
+    /*  */
     border-radius: 25px;
     color: var(--dark);
     line-height: 1.6;
@@ -60,18 +59,18 @@ img{
     display: block;
     object-fit: contain;
     width: 100%;
-    border-radius: 10px;
     transition: transform 0.5s ease-in-out;
 }
+
 .recipe__image{
     overflow: hidden;
-    border-radius: 10px;
+ 
 }
 .recipe__image:hover img{
     transform: scale(1.2);
 }
 .recipe__details{
-    margin-top: 2rem;
+    padding:1.5rem;
 }
 
 .recipe__description h1{
@@ -148,9 +147,16 @@ footer a{
     color: currentColor;
     text-decoration: none;
 }
-@media(min-width:700px){
+@media(min-width:600px){
     main{
         padding: 2rem;
+        margin:3rem 0;
+    }
+    img ,.recipe__image{
+        border-radius: 10px;
+    }
+    .recipe__details{
+        padding: 0;
     }
 }
 
